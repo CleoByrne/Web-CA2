@@ -1,0 +1,125 @@
+@(id: Long, products: List[models.Product], user: models.users.User, env: play.api.Environment)
+@main("Product",user) {
+<!-- //BEGIN CLEO AND GLEN -->
+<main>
+                @for(p <- products) {
+                    @if(p.getId() == id){
+    <div class="row">
+
+            <div class="col-sm-6">
+                    @if(env.resource("public/images/" + p.getId + ".jpg").isDefined){
+                        <img src="/assets/images/@(p.getId).jpg" class="img-fluid" style="width:75%">
+                      } else {
+                        <img src="/assets/images/placeholder.jpg" class="img-fluid" style="width:75%">
+                      }
+            </div>
+
+            <div class="col-sm-6">
+                <div id="productJumbotron" class="jumbotron">
+                <h2>@p.getName</h2>
+                <ul>
+                    @if(p.getOnSale == 0) {
+                        <h5>Price: &euro; @("%.2f".format(p.getPrice))</h5>
+                    } else {
+                    <h5>Price:
+                        <span class="salePrice">&euro; @("%.2f".format(p.getPrice))</span> &euro; @("%.2f".format(p.getSalePrice))
+                    </h5>
+                }
+
+                    <div class="form-group">
+                            <label for="sel1">Quantity:</label>
+                            <input type="number" value="1" min="1" max="@p.getStock">
+                          </div>
+                          @if(user != null){
+                              @if("admin".equals(user.getRole())){
+                                <a href="@routes.AdminProductCtrl.updateProduct(p.getId)" class="btn btn-success">
+                                        Update
+                                    </a>
+            
+            
+                                    <a href="@routes.AdminProductCtrl.deleteProduct(p.getId)" class="btn btn-danger" onclick="return confirmDel();">
+                                        Delete
+                                    </a>
+                              } 
+                              @if("customer".equals(user.getRole())){
+                         <a id="addToCartBtn" href="@controllers.routes.ShoppingCtrl.addToCart(p.getId)" class="btn btn-default">Add To Cart</a> 
+                              }
+                          } else {
+                            <a id="addToCartBtn" href="@routes.HomeController.cart()" class="btn btn-default">Add To Cart</a>
+                          }
+                    </ul>
+                        </div>
+            </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#description">Description</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#specifications">Specifications</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#deliveryAndReturns">Delivery & Returns</a>
+                </li>
+            </ul>
+
+            <div class="tab-content">
+                <div class="tab-pane active container" id="description">@p.getDescriptionL</div>
+                <div class="tab-pane container" id="specifications">
+                    <li>@p.getSpec1</li>
+                    <li>@p.getSpec2</li>
+                    <li>@p.getSpec3</li>
+                </div>
+                <div class="tab-pane container" id="deliveryAndReturns">
+                    <div class="wysiwyg-content"><h6> Delivery</h6>
+<div>
+<span style="line-height: 1.5;">We offer a comprehensive nationwide delivery service; we aim to deliver all orders as quickly as possible.</span>
+</div>
+<ul>
+<li> 1 to 3 days on stocked items, non stock product up to 10 days.</li>
+</ul>
+<p>
+Note:
+</p>
+<ul>
+<li> If delivery is urgent check with the local store, we are here to assist.</li>
+<li> Locations within 30 km of a store are covered daily.</li>
+<li> Delivery times for rural areas may vary depending on routes and availability.</li>
+</ul>
+<h6> Free Pick Up In Store</h6>
+<p>
+Can’t wait for delivery or don’t want to pay additional charges? It’s incredibly simple to pick up your online order in store and get your hands on your product quickly and easily. Simply select the free pick up in store option and head to your nearest store to pick up your order.
+</p>
+<ol>
+<li> After your order is placed, you will receive an “order confirmation email” with your “order confirmation number” (this is usually sent out within 2 hours).</li>
+<li> Once the store has confirmed your order and reserved the stock, you will receive an email “Ready for collection”.</li>
+<li> Bring your "order confirmation number" to the store you selected for pick up, along with photo ID and the credit card you used to make the order.</li>
+<li> Speak to one of our staff and your order should be processed in minutes.</li>
+</ol>
+<h6> Easy returns</h6>
+<p>
+If you feel your product has failed a Consumer Guarantee (as defined by Irish Consumer Law) then don't worry you can easily return it to your local store. We'll even pay for the postage if you live in an area where there is no store. Our returns policy covers any purchased item (<a href="/customer-services/returns-policy.html">conditions apply</a>).
+</p></div>
+
+</div></div>
+            </div>
+
+        </div>
+    </div>
+}
+            }
+
+</main>
+
+<script>
+        function confirmDel() {
+            return confirm('Are you sure?');
+        }
+    </script>
+    
+<!-- //END CLEO AND GLEN -->
+}

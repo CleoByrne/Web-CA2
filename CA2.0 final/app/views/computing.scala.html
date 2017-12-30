@@ -1,0 +1,70 @@
+@(products: List[models.Product], user: models.users.User, env: play.api.Environment)
+@main("Computing", user) {
+    <!-- //BEGIN GLEN -->
+    <main>
+            <div class="jumbotron">    
+                    <h1 id="productGroupLabel">Computing</h1>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            @for(p<- products) { 
+                                @if(p.getCategory=="Computing"){ 
+                                
+                                <div class="col-sm-4">
+                
+                                <div class="card" id="productCard">
+                
+                                    @if(env.resource("public/images/" + p.getId + ".jpg").isDefined){
+                                        <a href="@routes.HomeController.product(p.getId)">    
+                                        <img class="card-img-top" id="cardProductImages" src="/assets/images/@(p.getId).jpg"></a> } else {
+                                        <a href="@routes.HomeController.product(p.getId)"> 
+                                        <img class="card-img-top" id="cardProductImages" src="/assets/images/placeholder.jpg"></a>}
+                
+                                    <div class="card-block" id="productCardText">
+                                        <h4 class="card-title">@p.getName</h4>
+                                        <p class="card-text">@p.getDescriptionS</p>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">@p.getSpec1</li>
+                                            <li class="list-group-item">@p.getSpec2</li>
+                                            <li class="list-group-item">@p.getSpec3</li>
+                                        </ul>
+                                    </div>
+                                    @if(user != null){
+                                        @if("admin".equals(user.getRole())) {
+                                            
+                                                <div class="btn-group" style='width:100%;'>
+                                                    <a href="@routes.AdminProductCtrl.updateProduct(p.getId)" style='width:50.5%;float:left;' class="btn btn-success btn-block mt-auto">
+                                                      Update
+                                                    </a>
+                                                  
+                                                  
+                                                    <a href="@routes.AdminProductCtrl.deleteProduct(p.getId)" style='width:50.5%;float:right;' class="btn btn-danger btn-block mt-auto" onclick="return confirmDel();">
+                                                      Delete
+                                                    </a>
+                                            </div>   
+                                    
+                                            }else{
+                                                <a href="@routes.HomeController.product(p.getId)" class="btn btn-info btn-block mt-auto">Buy Now</a>
+            
+                                            }
+                                        }else{
+                                            <a href="@routes.HomeController.product(p.getId)" class="btn btn-info btn-block mt-auto">Buy Now</a>
+                                            
+                                        }
+                                </div>
+                
+                        </div>
+                        } 
+                    }
+                    </div>
+                    </div>
+            </main>
+
+            <script>
+                    function confirmDel() {
+                        return confirm('Are you sure?');
+                    }
+                </script>
+                
+ <!-- //END GLEN -->
+}

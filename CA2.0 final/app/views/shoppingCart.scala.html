@@ -1,0 +1,124 @@
+@(customer: models.users.Customer, env: play.api.Environment)
+
+
+@import play.api.Play.current
+@import models.shopping._
+@import models.Product
+
+@main("ShoppingCart", customer) {
+  <!-- //BEGIN CLEO AND GLEN -->
+    <main>
+        <div class="container">
+          <h1>My Cart</h1>
+          <div class="row">
+
+          <div class="col-md-12">
+            @if(flash.containsKey("success")) {
+                <div class="alert alert-success">
+                    @flash.get("success")
+                </div>
+            } 
+            <table id="cart" class="table table-hover table-condensed">
+                      <thead>
+                      <tr>
+                        <th style="width:50%">Product</th>
+                        <th style="width:10%">Price</th>
+                        <th style="width:8%">Quantity</th>
+                        <th style ="width:20%"></th>
+                        <th style="width:12%" class="text-center">Subtotal</th>
+                        <th style="width:10%"></th>
+                      </tr>
+                    </thead>
+
+                    
+                    <tbody>
+                      @if(customer.getCart() != null) { 
+                        @if(customer.getCart().getCartItems().isEmpty()){
+                          <td data-th="Price">
+                            <h2>Your Shopping Cart Is Empty</h2>
+                          </td>
+                          <tfoot>
+                            <tr>
+                              <td><a href="@routes.HomeController.index()" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
+                              </tr>
+                              </tfoot>
+                        } else {
+                          @for(i <- customer.getCart().getCartItems()) {
+                          <tr>
+                              <td data-th="Product">
+                                <div class="row">
+                                  <div class="col-sm-2 hidden-xs">
+                                      @if(env.resource("public/images/" + i.getProduct.getId + ".jpg").isDefined){
+                                        <img src="/assets/images/@(i.getProduct.getId).jpg" class="img-fluid" style="width:100%" alt="Image">
+                                      } else {
+                                        <img src="/assets/images/placeholder.jpg" class="img-fluid" style="width:100%" alt="Image">
+                                      }
+                                  </div>
+                                  <div class="col-sm-10">
+                                    <h4 class="nomargin">@i.getProduct.getName</h4>
+                                    <p>@i.getProduct.getDescriptionS()</p>
+                                  </div>
+                                </div>
+                              </td>
+                                @if(i.getOnSale == 1){
+                                  <td data-th="Price" class="text-center">&euro; @("%.2f".format(i.getSalePrice))</td>
+                                }else{
+                                <td data-th="Price" class="text-center">&euro; @("%.2f".format(i.getPrice))</td>
+                                }
+
+                                  <td data-th="Quantity" class="text-center" style="text-align:centre;">
+                                    @i.getQuantity()
+                                  </td>
+                                  
+
+                                   <td><a href="@routes.ShoppingCtrl.removeOne(i.getId)"><button class="btn btn-danger btn-sm"><span class="fa fa-minus"></span></button></a>
+                                    <a href="@routes.ShoppingCtrl.addOne(i.getId)"><button class="btn btn-info btn-sm" ><span class="fa fa-plus"></span></button></a>
+                                    </td> 
+                                  
+                                <td data-th="Subtotal" class="text-center">&euro; @("%.2f".format(i.getItemTotal))</td>
+                                <td class="actions" data-th="">
+                                    <a href="@routes.ShoppingCtrl.showCart()"><button class="btn btn-info btn-sm"><i class="fa fa-refresh"></i></button></a>
+                                    <a href="@routes.ShoppingCtrl.removeItem(i.getId)" onclick="return confirmDel();"><button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button></a>								
+                                  </td>
+                            </tr>
+                     }
+                
+           
+              </tbody>
+            
+
+              <tfoot>
+                <tr>
+                  <td><a href="@routes.HomeController.index()" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
+                  <td colspan="2" class="hidden-xs"></td>
+                  <td><a href="@routes.ShoppingCtrl.emptyCart()" class="btn btn-danger" onclick="return confirmDel();">Empty Cart</a></td>
+                  
+                  <td class="hidden-xs text-center"><strong>Total: &euro; @("%.2f".format(customer.getCart.getCartTotal))</strong></td>
+                  <td><a href="@routes.ShoppingCtrl.placeOrder()" class="btn btn-success btn-block">Checkout <i class="fa fa-angle-right"></i></a></td>
+                </tr>
+              </tfoot>
+            }
+            }else {
+              <td data-th="Price">
+                <h2>Your Shopping Cart Is Empty</h2>
+              </td>
+              <tfoot>
+                <tr>
+                  <td><a href="@routes.HomeController.index()" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
+                  </tr>
+                  </tfoot>}
+
+                    
+                  </table>
+          </div>
+        </div>
+          
+          </main>
+          
+          <script>
+            function confirmDel() {
+              return confirm('Are you sure?');
+            }
+          </script>
+          <!-- //END CLEO AND GLEN -->
+    }

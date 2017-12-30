@@ -1,0 +1,163 @@
+@(addCustomerForm: Form[models.users.Customer], loginForm: Form[models.users.Login], user: models.users.User)
+@import helper._
+
+@main("LogIn", user) {
+<!-- //BEGIN CLEO AND GLEN -->
+<main>
+        @if(loginForm.hasGlobalErrors) {
+            <p class="alert alert-warning">
+                @loginForm.globalError.message
+            </p>
+        }
+        @if(flash.containsKey("error")) {
+            <p class="alert alert-warning">
+                @flash.get("loginRequired")
+            </p>
+        }
+        
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="jumbotron">
+                <h3>Create Account</h3>
+                @form(action = controllers.security.routes.LoginCtrl.addCustomerSubmit(), 'class -> "form-horizontal", 'role -> "form", 'enctype -> "multipart/form-data") {
+                    @CSRF.formField
+                <form>
+                        
+                    <div class="row">
+                            <div "form-group">
+                                    <label for="validationDefault04"></label>
+                                    <input type="hidden" name="role" class="form-control input-xs" placeholder="Role" value="customer" value="@addCustomerForm("role").value ">
+                                    <div class="invalid-feedback">
+                                        Please provide a valid role.
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 form-group">
+                                        <label for="validationDefault03"></label>
+                                        <input type="email" name="email" class="form-control input-xs" placeholder="Email" value="@addCustomerForm("email").value">
+                                        <div class="invalid-feedback">
+                                            Please provide a valid email.
+                                        </div>
+                                    </div>
+                        <div class="col-sm-6 form-group">
+                            <label for="validationDefault01"></label>
+                            <input type="text" name="firstName" class="form-control input-xs" placeholder="First Name" value="@addCustomerForm("firstName").value">
+                            <div class="invalid-feedback">
+                                Please provide a valid first name.
+                            </div>
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <label for="validationDefault02"></label>
+                            <input type="text" name="lastName" class="form-control input-xs" placeholder="Last Name" value="@addCustomerForm("lastName").value">
+                            <div class="invalid-feedback">
+                                Please provide a valid last name.
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-12 form-group">
+                                <label for="validationDefault05"></label>
+                                <input type="password" name="password" class="form-control input-xs" placeholder="Password" value="@addCustomerForm("password").value">
+                                <div class="invalid-feedback">
+                                    Please provide a valid password.
+                                </div>
+                            </div>
+                        <div class="col-sm-12 form-group">
+                            <label for="validationDefault04"></label>
+                            <input type="tel" name="phoneNumber" class="form-control input-xs" placeholder="Phone Number" value="@addCustomerForm("phoneNumber").value">
+                            <div class="invalid-feedback">
+                                Please provide a valid phone number.
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-12 form-group">
+                            <label for="validationDefault06"></label>
+                            <input type="text" name="street1" class="form-control input-xs" placeholder="Street Line 1" value="@addCustomerForm("street1").value">
+                            <div class="invalid-feedback">
+                                Please provide a valid street address.
+                            </div>
+                        </div>
+                        <div class="col-sm-12 form-group">
+                            <label for="validationDefault07"></label>
+                            <input type="text" name="street2" class="form-control input-xs" placeholder="Street Line 2" value="@addCustomerForm("street2").value">
+                            <div class="invalid-feedback">
+                                Please provide a street address.
+                            </div>
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <label for="validationDefault08"></label>
+                            <input type="text" name="town" class="form-control input-xs" placeholder="Town" value="@addCustomerForm("town").value">
+                            <div class="invalid-feedback">
+                                Please provide a valid town.
+                            </div>
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <label for="validationDefault09"></label>
+                            <input type="text" name="postCode" class="form-control input-xs" placeholder="Postcode" value="@addCustomerForm("postCode").value">
+                            <div class="invalid-feedback">
+                                Please provide a valid postcode.
+                            </div>
+                        </div>
+                        <div class="col-sm-12 form-group">
+                            <label for="validationDefault10"></label>
+                            <input type="number" name="creditCard" class="form-control input-xs" placeholder="Credit Card Number" value="@addCustomerForm("creditCard").value">
+                            <div class="invalid-feedback">
+                                Please provide a valid credit card number.
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-12 form-group">
+                            <button class="btn btn-default pull-right" type="submit">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            }
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="jumbotron">
+                <h3>Sign In</h3>   
+                 @form(action = controllers.security.routes.LoginCtrl.loginSubmit(), 'class -> "form-horizontal", 'role -> "form") {
+                    @CSRF.formField
+                <form>
+                    
+                    <div class="row">
+                        
+                        <div class="col-sm-12 form-group">
+                                <label for="validationDefault01"></label>
+                                <div class="input-group margin-bottom-sm">
+                                <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+                                <input type="email" name="email" class="form-control input-xs" placeholder="Email" value="@loginForm("email").value">
+                                </div>
+                        </div>
+                        <div class="col-sm-12 form-group">
+                                <label for="validationDefault01"></label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+                                    <input id="passwordInput" type="password" name="password" class="form-control input-xs" placeholder="Password" value="@loginForm("password").value">
+                                    </div>
+                        </div>
+                        <div class="col-sm-6 form-check">
+                            <p>Show Password</p>       
+                        <label class="switch">
+                            
+                                <input type="checkbox" onclick="showPassword()">   
+                                                         
+                                <span class="slider round"></span>
+                              </label>                            
+                            </div>
+                            
+                        <div class="col-sm-12 form-group">
+                            <button class="btn btn-default pull-right" type="submit">Submit</button>
+                        </div>
+                        
+                    </div>
+                
+                </form>
+                }
+            </div>
+        </div>
+        
+    </div>
+</main>
+<!-- //END CLEO AND GLEN -->
+}

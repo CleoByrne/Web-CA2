@@ -1,0 +1,177 @@
+@(email: String, updateUserForm: Form[models.users.User], user: models.users.User)
+
+@import models.Product
+
+@import helper._
+
+@main("Account Details", user) {
+        <main>
+	<h3 style='text-align: center;'>Account Details</h3>
+	@if("admin".equals(user.getRole())){
+        <div class="col-sm-12">
+
+                @form(action = controllers.security.routes.LoginCtrl.updateUserSubmit(email), 'class -> "form-horizontal", 'role -> "form", 'enctype -> "multipart/form-data") {
+                    @CSRF.formField
+                <form>
+                        
+                    <div class="row">
+                            <div "form-group">
+                                    <label for="validationDefault04"></label>
+                                    <input type="hidden" name="role" class="form-control input-xs" placeholder="Role" value="admin" value="@updateUserForm("role").value ">
+                                    <div class="invalid-feedback">
+                                        Please provide a valid role.
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 form-group">
+                                        <label for="validationDefault03"></label>
+                                        <input type="email" name="email" class="form-control input-xs" placeholder="Email" value="@updateUserForm("email").value">
+                                        <div class="invalid-feedback">
+                                            Please provide a valid email.
+                                        </div>
+                                    </div>
+                        <div class="col-sm-6 form-group">
+                            <label for="validationDefault01"></label>
+                            <input type="text" name="firstName" class="form-control input-xs" placeholder="First Name" value="@updateUserForm("firstName").value">
+                            <div class="invalid-feedback">
+                                Please provide a valid first name.
+                            </div>
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <label for="validationDefault02"></label>
+                            <input type="text" name="lastName" class="form-control input-xs" placeholder="Last Name" value="@updateUserForm("lastName").value">
+                            <div class="invalid-feedback">
+                                Please provide a valid last name.
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-12 form-group">
+                                <label for="validationDefault05"></label>
+                                <input type="password" name="password" class="form-control input-xs" placeholder="Password" value="@updateUserForm("password").value">
+                                <div class="invalid-feedback">
+                                    Please provide a valid password.
+                                </div>
+                            </div>
+                        
+                        <div class="col-sm-12 form-group">
+                                <div class="actions">
+                                        <input type="submit" value="Save" class="btn btn-success pull-right">
+                                        
+                                              <a href="@routes.HomeController.index()">
+                                                  <button class="btn btn-danger pull-left" role="button">Cancel</button>
+                                              </a>
+                                    </div>
+                        </div>
+                    </div>
+                </form>
+            }
+        </div>
+    }
+
+    @if("customer".equals(user.getRole())){
+        <div class="col-sm-12">
+
+                @form(action = controllers.security.routes.LoginCtrl.updateUserSubmit(email), 'class -> "form-horizontal", 'role -> "form", 'enctype -> "multipart/form-data") {
+                    @CSRF.formField
+                <form>
+                        
+                    <div class="row">
+                            <div "form-group">
+                                    <label for="validationDefault01"></label>
+                                    <input type="hidden" name="role" class="form-control input-xs" placeholder="Role" value="customer" value="@updateUserForm("role").value ">
+                                    <div class="invalid-feedback">
+                                        Please provide a valid role.
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 form-group">
+                                        <label for="validationDefault02"></label>
+                                        <input type="email" name="email" class="form-control input-xs" placeholder="Email" value="@updateUserForm("email").value">
+                                        <div class="invalid-feedback">
+                                            Please provide a valid email.
+                                        </div>
+                                    </div>
+                        <div class="col-sm-6 form-group">
+                            <label for="validationDefault03"></label>
+                            <input type="text" name="firstName" class="form-control input-xs" placeholder="First Name" value="@updateUserForm("firstName").value">
+                            <div class="invalid-feedback">
+                                Please provide a valid first name.
+                            </div>
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <label for="validationDefault04"></label>
+                            <input type="text" name="lastName" class="form-control input-xs" placeholder="Last Name" value="@updateUserForm("lastName").value">
+                            <div class="invalid-feedback">
+                                Please provide a valid last name.
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-12 form-group">
+                                <label for="validationDefault05"></label>
+                                <input type="password" name="password" class="form-control input-xs" placeholder="Password" value="@updateUserForm("password").value">
+                                <div class="invalid-feedback">
+                                    Please provide a valid password.
+                                </div>
+                            </div>
+                        <div class="col-sm-12 form-group">
+                            <label for="validationDefault06"></label>
+                            <input type="tel" name="phoneNumber" class="form-control input-xs" placeholder="Phone Number" value="@updateUserForm("phoneNumber").value">
+                            <div class="invalid-feedback">
+                                Please provide a valid phone number.
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-12 form-group">
+                            <label for="validationDefault07"></label>
+                            <input type="text" name="street1" class="form-control input-xs" placeholder="Street Line 1" value="@updateUserForm("street1").value">
+                            <div class="invalid-feedback">
+                                Please provide a valid street address.
+                            </div>
+                        </div>
+                        <div class="col-sm-12 form-group">
+                            <label for="validationDefault08"></label>
+                            <input type="text" name="street2" class="form-control input-xs" placeholder="Street Line 2" value="@updateUserForm("street2").value">
+                            <div class="invalid-feedback">
+                                Please provide a street address.
+                            </div>
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <label for="validationDefault09"></label>
+                            <input type="text" name="town" class="form-control input-xs" placeholder="Town" value="@updateUserForm("town").value">
+                            <div class="invalid-feedback">
+                                Please provide a valid town.
+                            </div>
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <label for="validationDefault10"></label>
+                            <input type="text" name="postCode" class="form-control input-xs" placeholder="Postcode" value="@updateUserForm("postCode").value">
+                            <div class="invalid-feedback">
+                                Please provide a valid postcode.
+                            </div>
+                        </div>
+                        <div class="col-sm-12 form-group">
+                            <label for="validationDefault11"></label>
+                            <input type="number" name="creditCard" class="form-control input-xs" placeholder="Credit Card Number" value="@updateUserForm("creditCard").value">
+                            <div class="invalid-feedback">
+                                Please provide a valid credit card number.
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-12 form-group">
+                                <div class="actions">
+                                        <input type="submit" value="Save" class="btn btn-success pull-right">
+                                        
+                                              <a href="@routes.HomeController.index()">
+                                                  <button class="btn btn-danger pull-left" role="button">Cancel</button>
+                                              </a>
+                                    </div>
+                        </div>
+                    </div>
+                </form>
+            }
+        </div>
+}
+</div>
+</div>
+</main>
+}
+
+

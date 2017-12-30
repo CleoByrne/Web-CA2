@@ -1,0 +1,48 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+
+GET     /                                   controllers.HomeController.index
+GET     /allTvs                             controllers.HomeController.allTvs
+GET     /tvAcc                              controllers.HomeController.tvAcc
+GET     /allPhones                          controllers.HomeController.allPhones
+GET     /phoneAcc                           controllers.HomeController.phoneAcc
+GET     /computing                          controllers.HomeController.computing
+GET     /tablets                            controllers.HomeController.tablets
+GET     /contactUs                          controllers.HomeController.contactUs
+POST    /contactUsSubmit                    controllers.HomeController.contactUsSubmit
+GET     /contactUsSuccess                   controllers.HomeController.contactUsSuccess
+GET     /product:id                         controllers.HomeController.product(id: Long)
+
+# Login form
+GET		/login					            controllers.security.LoginCtrl.login
+POST	/loginSubmit					    controllers.security.LoginCtrl.loginSubmit
+GET     /logout                             controllers.security.LoginCtrl.logout
+
+# Shopping
+GET     /showCart                           controllers.ShoppingCtrl.showCart()
+GET     /addToCart/:id                      controllers.ShoppingCtrl.addToCart(id: Long)
+GET     /addOne/:itemId                     controllers.ShoppingCtrl.addOne(itemId: Long)
+GET     /removeOne/:itemId                  controllers.ShoppingCtrl.removeOne(itemId: Long)
+GET     /removeItem/:itemId                 controllers.ShoppingCtrl.removeItem(itemId: Long)
+GET     /emptyCart                          controllers.ShoppingCtrl.emptyCart()
+GET     /placeOrder                         controllers.ShoppingCtrl.placeOrder()
+GET     /viewOrder/:id                      controllers.ShoppingCtrl.viewOrder(id: Long)
+GET     /cart                               controllers.HomeController.cart
+
+POST    /addCustomerSubmit                  controllers.security.LoginCtrl.addCustomerSubmit()
+
+GET     /updateUser/:email                  controllers.security.LoginCtrl.updateUser(email: String)           
+POST    /updateUserSubmit/:email            controllers.security.LoginCtrl.updateUserSubmit(email: String)
+
+GET		/Admin/addProduct					controllers.AdminProductCtrl.addProduct()
+POST	/Admin/addProductSubmit				controllers.AdminProductCtrl.addProductSubmit()
+
+GET		/Admin/updateProduct/:id			controllers.AdminProductCtrl.updateProduct(id:Long)
+POST	/Admin/updateProductSubmit/:id		controllers.AdminProductCtrl.updateProductSubmit(id:Long)
+
+GET     /Admin/delProduct/:id               controllers.AdminProductCtrl.deleteProduct(id:Long)
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

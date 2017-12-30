@@ -1,0 +1,85 @@
+@(contactUsForm: Form[models.Contact], user: models.users.User)
+
+@import helper._
+
+@main("ContactUs", user) {
+  <!-- //BEGIN CLEO AND GLEN -->
+<main>
+  <h2 class="text-center">Get in touch</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Contact us and we'll get back to you within 24 hours.</p>
+      <p>
+        <span class="fa fa-map-marker"></span> Dublin, Ireland</p>
+      <p>
+        <span class="fa fa-phone"></span> +00 1515151515</p>
+      <p>
+        <span class="fa fa-envelope"></span> contactUs@@gmail.com</p>
+
+      <div id="googleMap"></div>
+
+    </div>
+
+    <div class="col-sm-7">
+        @form(action = routes.HomeController.contactUsSubmit(), 'class -> "form-horizontal", 'role -> "form", 'enctype -> "multipart/form-data") {
+					@CSRF.formField
+      <form>
+        <div class="row">
+          <div class="col-sm-6 form-group">
+            <label for="validationDefault01"></label>
+            <input class="form-control" id="firstName" name="firstName" placeholder="First Name" type="text" value="@contactUsForm("firstName").value" required>
+            <div class="invalid-feedback">
+              Please provide a valid first name.
+            </div>
+          </div>
+          <div class="col-sm-6 form-group">
+            <label for="validationDefault02"></label>
+            <input class="form-control" id="lastName" name="LastName" placeholder="Last Name" type="text" value="@contactUsForm("lastName").value" required>
+            <div class="invalid-feedback">
+              Please provide a valid last name.
+            </div>
+          </div>
+          <div class="col-sm-12 form-group">
+            <label for="validationDefault03"></label>
+            <input class="form-control" id="email" name="email" placeholder="Email" type="email" value="@contactUsForm("email").value" required>
+            <div class="invalid-feedback">
+              Please provide a valid email.
+            </div>
+          </div>
+          <div class="col-sm-12 form-group">
+            <label for="validationDefault04"></label>
+            <input class="form-control" id="phoneNumber" name="phoneNumber" placeholder="Phone Number" type="text" value="@contactUsForm("phoneNumber").value" required>
+            <div class="invalid-feedback">
+              Please provide a valid phone number.
+            </div>
+          </div>
+          <div class="col-sm-12 form-group">
+            <label for="validationDefault05"></label>
+            <input class="form-control" id="subject" name="subject" placeholder="Subject" type="text" value="@contactUsForm("subject").value" required>
+            <div class="invalid-feedback">
+              Please provide a valid subject.
+            </div>
+          </div>
+          <div class="col-sm-12 form-group">
+              <label for="validationDefault06"></label>
+              <textarea class="form-control" id="comment" name="comment" placeholder="Comment" rows="8" required>@contactUsForm("comment").value</textarea>
+          <div class="invalid-feedback">
+              Please fill out a comment.
+          </div>
+        </div>
+
+        </div>
+  
+        <br>
+        <div class="row">
+          <div class="col-sm-12 form-group">
+            <button class="btn btn-default pull-right" type="submit">Submit</button>
+          </div>
+        </div>
+      </form>
+    }
+    </div>
+  </div>
+</main>
+<!-- //BEGIN CLEO AND GLEN -->
+}

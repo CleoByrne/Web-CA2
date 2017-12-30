@@ -1,0 +1,47 @@
+@(products: List[models.Product], user: models.users.User, env: play.api.Environment)
+@main("Home", user) {
+<!-- // BEGIN CLEO AND GLEN -->
+  <main>
+  <div class="container">
+    
+    <div class="row">
+      @for(p <- products){
+        @if(p.getOnSale == 1){
+      <div class="col-sm-4">
+        <div class="card" id="indexSaleCard">
+          <div class="card-header">CHRISTMAS DEAL</div>
+          <div class="card-body">
+            @if(env.resource("public/images/" + p.getId + ".jpg").isDefined){
+              <a href="@routes.HomeController.product(p.getId)">
+                <img src="/assets/images/@(p.getId).jpg" class="img-fluid" style="height:10em; width:20em; text-align:centre;" alt="Image">
+                </a>
+          } else {
+            <a href="@routes.HomeController.product(p.getId)">
+            <img src="/assets/images/placeholder.jpg" class="img-fluid" style="height:10em; width:10em; text-align:centre;" alt="Image">
+            </a>
+          }
+            <div id="priceMore">
+              <ul>
+                <li>
+                  <strong>Price :</strong> Was
+                  <span class="salePrice">&euro; @("%.2f".format(p.getPrice))</span>, Now
+                  <span>&euro; @("%.2f".format(p.getSalePrice))</span>
+                </li>
+                <li>
+                  <a href="@routes.HomeController.product(p.getId)" class="moreInfoBtn">Click for more info</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-footer">On Sale Now! Limited Time Only!</div>
+        </div>
+      </div>
+    }
+    }
+  </div>
+</div>
+  <br>
+  <br>
+</main>
+<!-- // END CLEO AND GLEN -->
+}

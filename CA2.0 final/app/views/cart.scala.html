@@ -1,0 +1,27 @@
+@(user: models.users.User)
+@main("cart",user){
+    <main>
+        <div class="container">
+            <div class="jumbotron">   
+              <h1>My Cart</h1>
+                <div class="row">
+                  
+                    <div class="col-md-12">
+                      @if(flash.containsKey("success")) {
+                          <div class="alert alert-success">
+                              @flash.get("success")
+                          </div>
+                      } 
+                  
+                            
+                            <div style="padding:1em 1em 1em  0em;"><h3>Please login to view your cart or Create an Account to get Started Today!!!</h3></div>
+                            <a href="@controllers.security.routes.LoginCtrl.login()"style="width:25%;" class="btn btn-danger btn-block ">Click here to Login or Sign up</a>
+                                
+                              
+                    </div> 
+                </div>
+            </div>            
+        </div>  
+    </main>                       
+
+}

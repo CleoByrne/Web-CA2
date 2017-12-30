@@ -1,0 +1,171 @@
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\views\accountDetails.scala.html:20:164: method value in class Field is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                    <input type="hidden" name="role" class="form-control input-xs" placeholder="Role" value="admin" value="@updateUserForm("role").value ">[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                                                                                                                                                   ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\views\accountDetails.scala.html:27:156: method value in class Field is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                        <input type="email" name="email" class="form-control input-xs" placeholder="Email" value="@updateUserForm("email").value">[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                                                                                                                                           ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\views\accountDetails.scala.html:34:156: method value in class Field is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m                            <input type="text" name="firstName" class="form-control input-xs" placeholder="First Name" value="@updateUserForm("firstName").value">[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                                                                                                                                           ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\views\accountDetails.scala.html:41:153: method value in class Field is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m                            <input type="text" name="lastName" class="form-control input-xs" placeholder="Last Name" value="@updateUserForm("lastName").value">[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                                                                                                                                        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\views\accountDetails.scala.html:49:160: method value in class Field is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                <input type="password" name="password" class="form-control input-xs" placeholder="Password" value="@updateUserForm("password").value">[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                                                                                                                                               ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\views\accountDetails.scala.html:80:167: method value in class Field is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                    <input type="hidden" name="role" class="form-control input-xs" placeholder="Role" value="customer" value="@updateUserForm("role").value ">[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                                                                                                                                                      ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\views\accountDetails.scala.html:87:156: method value in class Field is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                        <input type="email" name="email" class="form-control input-xs" placeholder="Email" value="@updateUserForm("email").value">[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                                                                                                                                           ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\views\accountDetails.scala.html:94:156: method value in class Field is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m                            <input type="text" name="firstName" class="form-control input-xs" placeholder="First Name" value="@updateUserForm("firstName").value">[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                                                                                                                                           ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\views\accountDetails.scala.html:101:153: method value in class Field is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m                            <input type="text" name="lastName" class="form-control input-xs" placeholder="Last Name" value="@updateUserForm("lastName").value">[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                                                                                                                                        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\views\accountDetails.scala.html:109:160: method value in class Field is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                <input type="password" name="password" class="form-control input-xs" placeholder="Password" value="@updateUserForm("password").value">[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                                                                                                                                               ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\views\accountDetails.scala.html:116:161: method value in class Field is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m                            <input type="tel" name="phoneNumber" class="form-control input-xs" placeholder="Phone Number" value="@updateUserForm("phoneNumber").value">[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                                                                                                                                                ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\views\accountDetails.scala.html:124:155: method value in class Field is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m                            <input type="text" name="street1" class="form-control input-xs" placeholder="Street Line 1" value="@updateUserForm("street1").value">[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                                                                                                                                          ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\views\accountDetails.scala.html:131:155: method value in class Field is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m                            <input type="text" name="street2" class="form-control input-xs" placeholder="Street Line 2" value="@updateUserForm("street2").value">[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                                                                                                                                          ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\views\accountDetails.scala.html:138:140: method value in class Field is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m                            <input type="text" name="town" class="form-control input-xs" placeholder="Town" value="@updateUserForm("town").value">[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                                                                                                                           ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\views\accountDetails.scala.html:145:152: method value in class Field is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m                            <input type="text" name="postCode" class="form-control input-xs" placeholder="Postcode" value="@updateUserForm("postCode").value">[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                                                                                                                                       ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\views\accountDetails.scala.html:152:168: method value in class Field is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m                            <input type="number" name="creditCard" class="form-control input-xs" placeholder="Credit Card Number" value="@updateUserForm("creditCard").value">[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                                                                                                                                                       ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\views\contactUs.scala.html:30:145: method value in class Field is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m            <input class="form-control" id="firstName" name="firstName" placeholder="First Name" type="text" value="@contactUsForm("firstName").value" required>[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                                                                                                                                ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\views\contactUs.scala.html:37:141: method value in class Field is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m            <input class="form-control" id="lastName" name="LastName" placeholder="Last Name" type="text" value="@contactUsForm("lastName").value" required>[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                                                                                                                            ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\views\contactUs.scala.html:44:129: method value in class Field is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m            <input class="form-control" id="email" name="email" placeholder="Email" type="email" value="@contactUsForm("email").value" required>[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                                                                                                                ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\views\contactUs.scala.html:51:153: method value in class Field is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m            <input class="form-control" id="phoneNumber" name="phoneNumber" placeholder="Phone Number" type="text" value="@contactUsForm("phoneNumber").value" required>[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                                                                                                                                        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\views\contactUs.scala.html:58:136: method value in class Field is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m            <input class="form-control" id="subject" name="subject" placeholder="Subject" type="text" value="@contactUsForm("subject").value" required>[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                                                                                                                       ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\views\contactUs.scala.html:65:140: method value in class Field is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m              <textarea class="form-control" id="comment" name="comment" placeholder="Comment" rows="8" required>@contactUsForm("comment").value</textarea>[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                                                                                                                           ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\views\productAdmin\addProduct.scala.html:21:124: method value in class Field is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m												<input type="text" name="Name" class="form-control input-xs" placeholder="Name" value="@addProductForm("name").value">[0m
+[0m[[0m[33mwarn[0m] [0m[0m												                                                                                                               ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\views\productAdmin\addProduct.scala.html:29:150: method value in class Field is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m									<input type="text" name="descriptionS" class="form-control input-xs" placeholder="Short Description" value="@addProductForm("descriptionS").value">[0m
+[0m[[0m[33mwarn[0m] [0m[0m									                                                                                                                                            ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\views\productAdmin\addProduct.scala.html:32:161: method value in class Field is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m									<textarea type="text" name="descriptionL" class="form-control input-xs" placeholder="Long Description" rows="8" value="@addProductForm("descriptionL").value"></textarea>[0m
+[0m[[0m[33mwarn[0m] [0m[0m									                                                                                                                                                       ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\views\productAdmin\addProduct.scala.html:36:136: method value in class Field is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m											<input type="number" name="stock" class="form-control input-xs" placeholder="Stock" min="0" value="@addProductForm("stock").value">[0m
+[0m[[0m[33mwarn[0m] [0m[0m											                                                                                                                            ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\views\productAdmin\addProduct.scala.html:39:146: method value in class Field is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m									<input type="number" name="price" class="form-control input-xs" placeholder="Price" min="0" step="0.01" value="@addProductForm("price").value">[0m
+[0m[[0m[33mwarn[0m] [0m[0m									                                                                                                                                        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\views\productAdmin\addProduct.scala.html:43:158: method value in class Field is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m									<input type="number" name="salePrice" class="form-control input-xs" placeholder="Sale Price" min="0" step="0.01"value="@addProductForm("salePrice").value">[0m
+[0m[[0m[33mwarn[0m] [0m[0m									                                                                                                                                                    ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\views\productAdmin\addProduct.scala.html:47:147: method value in class Field is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m									<input type="number" name="onSale" class="form-control input-xs" min="0" max="1" placeholder="On Sale?" value="@addProductForm("onSale").value">[0m
+[0m[[0m[33mwarn[0m] [0m[0m									                                                                                                                                         ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\views\productAdmin\addProduct.scala.html:51:134: method value in class Field is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m									<input type="text" name="spec1" class="form-control input-xs" placeholder="Specification 1" value="@addProductForm("spec1").value">[0m
+[0m[[0m[33mwarn[0m] [0m[0m									                                                                                                                            ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\views\productAdmin\addProduct.scala.html:55:134: method value in class Field is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m									<input type="text" name="spec2" class="form-control input-xs" placeholder="Specification 2" value="@addProductForm("spec2").value">[0m
+[0m[[0m[33mwarn[0m] [0m[0m									                                                                                                                            ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\views\productAdmin\addProduct.scala.html:59:134: method value in class Field is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m									<input type="text" name="spec3" class="form-control input-xs" placeholder="Specification 3" value="@addProductForm("spec3").value">[0m
+[0m[[0m[33mwarn[0m] [0m[0m									                                                                                                                            ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\views\productAdmin\updateProduct.scala.html:21:129: method value in class Field is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m														<input type="text" name="Name" class="form-control input-xs" placeholder="Name" value="@updateProductForm("name").value">[0m
+[0m[[0m[33mwarn[0m] [0m[0m														                                                                                                                  ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\views\productAdmin\updateProduct.scala.html:29:155: method value in class Field is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m											<input type="text" name="descriptionS" class="form-control input-xs" placeholder="Short Description" value="@updateProductForm("descriptionS").value">[0m
+[0m[[0m[33mwarn[0m] [0m[0m											                                                                                                                                               ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\views\productAdmin\updateProduct.scala.html:32:159: method value in class Field is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m											<textarea type="text" name="descriptionL" class="form-control input-xs" placeholder="Long Description" rows="8">@updateProductForm("descriptionL").value</textarea>[0m
+[0m[[0m[33mwarn[0m] [0m[0m											                                                                                                                                                   ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\views\productAdmin\updateProduct.scala.html:36:141: method value in class Field is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m													<input type="number" name="stock" class="form-control input-xs" placeholder="Stock" min="0" value="@updateProductForm("stock").value">[0m
+[0m[[0m[33mwarn[0m] [0m[0m													                                                                                                                               ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\views\productAdmin\updateProduct.scala.html:39:151: method value in class Field is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m											<input type="number" name="price" class="form-control input-xs" placeholder="Price" min="0" step="0.01" value="@updateProductForm("price").value">[0m
+[0m[[0m[33mwarn[0m] [0m[0m											                                                                                                                                           ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\views\productAdmin\updateProduct.scala.html:43:163: method value in class Field is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m											<input type="number" name="salePrice" class="form-control input-xs" placeholder="Sale Price" min="0" step="0.01"value="@updateProductForm("salePrice").value">[0m
+[0m[[0m[33mwarn[0m] [0m[0m											                                                                                                                                                       ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\views\productAdmin\updateProduct.scala.html:47:152: method value in class Field is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m											<input type="number" name="onSale" class="form-control input-xs" min="0" max="1" placeholder="On Sale?" value="@updateProductForm("onSale").value">[0m
+[0m[[0m[33mwarn[0m] [0m[0m											                                                                                                                                            ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\views\productAdmin\updateProduct.scala.html:51:139: method value in class Field is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m											<input type="text" name="spec1" class="form-control input-xs" placeholder="Specification 1" value="@updateProductForm("spec1").value">[0m
+[0m[[0m[33mwarn[0m] [0m[0m											                                                                                                                               ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\views\productAdmin\updateProduct.scala.html:55:139: method value in class Field is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m											<input type="text" name="spec2" class="form-control input-xs" placeholder="Specification 2" value="@updateProductForm("spec2").value">[0m
+[0m[[0m[33mwarn[0m] [0m[0m											                                                                                                                               ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\views\productAdmin\updateProduct.scala.html:59:139: method value in class Field is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m											<input type="text" name="spec3" class="form-control input-xs" placeholder="Specification 3" value="@updateProductForm("spec3").value">[0m
+[0m[[0m[33mwarn[0m] [0m[0m											                                                                                                                               ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\views\signIn.scala.html:9:28: method globalError in class Form is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m                @loginForm.globalError.message[0m
+[0m[[0m[33mwarn[0m] [0m[0m                           ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\views\signIn.scala.html:29:168: method value in class Field is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                    <input type="hidden" name="role" class="form-control input-xs" placeholder="Role" value="customer" value="@addCustomerForm("role").value ">[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                                                                                                                                                       ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\views\signIn.scala.html:36:157: method value in class Field is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                        <input type="email" name="email" class="form-control input-xs" placeholder="Email" value="@addCustomerForm("email").value">[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                                                                                                                                            ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\views\signIn.scala.html:43:157: method value in class Field is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m                            <input type="text" name="firstName" class="form-control input-xs" placeholder="First Name" value="@addCustomerForm("firstName").value">[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                                                                                                                                            ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\views\signIn.scala.html:50:154: method value in class Field is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m                            <input type="text" name="lastName" class="form-control input-xs" placeholder="Last Name" value="@addCustomerForm("lastName").value">[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                                                                                                                                         ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\views\signIn.scala.html:58:161: method value in class Field is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                <input type="password" name="password" class="form-control input-xs" placeholder="Password" value="@addCustomerForm("password").value">[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                                                                                                                                                ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\views\signIn.scala.html:65:162: method value in class Field is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m                            <input type="tel" name="phoneNumber" class="form-control input-xs" placeholder="Phone Number" value="@addCustomerForm("phoneNumber").value">[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                                                                                                                                                 ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\views\signIn.scala.html:73:156: method value in class Field is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m                            <input type="text" name="street1" class="form-control input-xs" placeholder="Street Line 1" value="@addCustomerForm("street1").value">[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                                                                                                                                           ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\views\signIn.scala.html:80:156: method value in class Field is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m                            <input type="text" name="street2" class="form-control input-xs" placeholder="Street Line 2" value="@addCustomerForm("street2").value">[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                                                                                                                                           ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\views\signIn.scala.html:87:141: method value in class Field is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m                            <input type="text" name="town" class="form-control input-xs" placeholder="Town" value="@addCustomerForm("town").value">[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                                                                                                                            ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\views\signIn.scala.html:94:153: method value in class Field is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m                            <input type="text" name="postCode" class="form-control input-xs" placeholder="Postcode" value="@addCustomerForm("postCode").value">[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                                                                                                                                        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\views\signIn.scala.html:101:169: method value in class Field is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m                            <input type="number" name="creditCard" class="form-control input-xs" placeholder="Credit Card Number" value="@addCustomerForm("creditCard").value">[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                                                                                                                                                        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\views\signIn.scala.html:129:143: method value in class Field is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                <input type="email" name="email" class="form-control input-xs" placeholder="Email" value="@loginForm("email").value">[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                                                                                                                              ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\views\signIn.scala.html:136:178: method value in class Field is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                    <input id="passwordInput" type="password" name="password" class="form-control input-xs" placeholder="Password" value="@loginForm("password").value">[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                                                                                                                                                                 ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m56 warnings found[0m
+[0m[[0m[0minfo[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\controllers\AdminProductCtrl.java: C:\Users\User\Documents\CA2.0 final\app\controllers\AdminProductCtrl.java uses unchecked or unsafe operations.[0m
+[0m[[0m[0minfo[0m] [0m[0mC:\Users\User\Documents\CA2.0 final\app\controllers\AdminProductCtrl.java: Recompile with -Xlint:unchecked for details.[0m
